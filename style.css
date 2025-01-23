@@ -1,0 +1,136 @@
+html {
+    background-color: rgb(20, 16, 27);
+}
+body{
+    background-color: rgb(69, 26, 82);
+    margin: 0%;
+    padding-bottom: 2%;
+    color: white;
+}
+header nav{
+    background-color: rgb(143, 64, 167);
+    margin: 0%;
+    padding: 1%;
+}
+header{
+    background-color: rgb(88, 48, 100);
+    margin-bottom: 20px;
+    padding-bottom: 2%;
+}
+header a {
+    color: white;
+    text-decoration: none;
+}
+header a.selected {
+    color: lightgreen;
+}
+header a#secondnav {
+    float: right;
+    position: relative; 
+    top: 15px;
+}
+#thirdnav {
+    float: right;
+    position: relative; 
+    top: 15px;
+    right: 30px;
+}
+.page {
+    padding: 2%;
+}
+h1 {
+    font-size: xx-large;
+}
+
+
+
+button.top_button{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+.top_button {
+    float: right;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    
+}
+  
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+  
+.svgIcon path {
+    fill: white;
+}
+  
+.top_button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(181, 160, 255);
+    align-items: center;
+}
+  
+  .top_button:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+  
+.top_button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+}
+  
+.top_button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+}
+  
+.wrapper:hover #myBtn {
+    transition: 1s;
+    left: 0;
+}
+
+#myBtn {
+    bottom: -100px;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+@-webkit-keyframes slide {
+    100% { bottom: 30px; }
+}
+
+@keyframes slide {
+    100% { bottom: 30px; }
+}
+
+#myBtn.show {
+  visibility: visible;  /* Hace visible el botón */
+  right: 30px;           /* La animación mueve el botón a la posición correcta */
+  animation: slide 0.5s forwards;  /* Ejecuta la animación para mover el botón */
+}
